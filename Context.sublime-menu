@@ -1,0 +1,15 @@
+[ {"caption": "Search",
+  "children":
+  [
+    { 
+        "caption":"StackOverflow",
+        "command": "search_stackoverflow"
+    },
+    { 
+        "caption":"Google",
+        "command": "search_google"
+    }
+
+]
+}
+]
