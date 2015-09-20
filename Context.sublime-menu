@@ -8,6 +8,10 @@
     { 
         "caption":"Google",
         "command": "search_google"
+    },
+    { 
+        "caption":"Github",
+        "command": "search_github"
     }
 
 ]

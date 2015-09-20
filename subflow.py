@@ -9,8 +9,8 @@ import webbrowser
 class SearchStackoverflowCommand(sublime_plugin.WindowCommand):
 
     def search(self, text):
-        sublime.status_message("I\'ve opened web browser for this page.")
-        webbrowser.open("http://stackoverflow.com/search?q="+text)
+        sublime.status_message("Opening browser.")
+        webbrowser.open("http://stackoverflow.com/search?q=%s" % text)
         return 0
 
     def run(self):
@@ -24,8 +24,23 @@ class SearchStackoverflowCommand(sublime_plugin.WindowCommand):
 class SearchGoogleCommand(sublime_plugin.WindowCommand):
 
     def search(self, text):
-        sublime.status_message("I\'ve opened web browser for this page.")
-        webbrowser.open("https://www.google.tn/search?q="+text)
+        sublime.status_message("Opening browser.")
+        webbrowser.open("https://www.google.tn/search?q=%s" % text)
+        return 0
+
+    def run(self):
+        v = self.window.active_view()
+        text = v.substr(v.sel()[0]).strip()
+        self.search(text)
+
+        return 0
+
+
+class SearchGithubCommand(sublime_plugin.WindowCommand):
+
+    def search(self, text):
+        sublime.status_message("Opening browser.")
+        webbrowser.open("https://github.com/search?q=%s&type=Code" % text)
         return 0
 
     def run(self):
