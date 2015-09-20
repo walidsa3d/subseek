@@ -49,3 +49,33 @@ class SearchGithubCommand(sublime_plugin.WindowCommand):
         self.search(text)
 
         return 0
+
+
+class SearchSemanticwebCommand(sublime_plugin.WindowCommand):
+
+    def search(self, text):
+        sublime.status_message("Opening browser.")
+        webbrowser.open("http://answers.semanticweb.com/search/?q=%s" % text)
+        return 0
+
+    def run(self):
+        v = self.window.active_view()
+        text = v.substr(v.sel()[0]).strip()
+        self.search(text)
+
+        return 0
+
+
+class SearchServerfaultCommand(sublime_plugin.WindowCommand):
+
+    def search(self, text):
+        sublime.status_message("Opening browser.")
+        webbrowser.open("http://serverfault.com/search?q=%s" % text)
+        return 0
+
+    def run(self):
+        v = self.window.active_view()
+        text = v.substr(v.sel()[0]).strip()
+        self.search(text)
+
+        return 0

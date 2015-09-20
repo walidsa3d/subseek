@@ -2,16 +2,25 @@
   "children":
   [
     { 
+      "caption":"Google",
+      "command": "search_google"
+    },
+    { 
         "caption":"StackOverflow",
         "command": "search_stackoverflow"
     },
-    { 
-        "caption":"Google",
-        "command": "search_google"
-    },
+    
     { 
         "caption":"Github",
         "command": "search_github"
+    },
+    { 
+        "caption":"Serverfault",
+        "command": "search_serverfault"
+    },
+    { 
+        "caption":"SemanticWeb",
+        "command": "search_semanticweb"
     }
 
 ]
