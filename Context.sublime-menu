@@ -3,24 +3,32 @@
   [
     { 
       "caption":"Google",
-      "command": "search_google"
+      "command": "search",
+      "args":{"site":"google"}
     },
     { 
         "caption":"StackOverflow",
-        "command": "search_stackoverflow"
+        "command": "search",
+        "args":{"site":"stackoverflow"}
+
     },
     
     { 
         "caption":"Github",
-        "command": "search_github"
+        "command": "search",
+        "args":{"site":"github"}
     },
     { 
         "caption":"Serverfault",
-        "command": "search_serverfault"
+        "command": "search",
+        "args":{"site":"serverfault"}
+
     },
     { 
         "caption":"SemanticWeb",
-        "command": "search_semanticweb"
+        "command": "search",
+        "args":{"site":"semanticweb"}
+
     }
 
 ]
