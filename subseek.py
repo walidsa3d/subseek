@@ -6,7 +6,7 @@ import sublime_plugin
 import webbrowser
 
 sites = {
-    "google": "https://www.google.tn/search?q=%s",
+    "google": "https://www.google.com/search?q=%s",
     "stackoverflow": "http://stackoverflow.com/search?q=%s",
     "serverfault": "http://serverfault.com/search?q=%s",
     "semanticoverflow": "https://github.com/search?q=%s&type=Code",
@@ -24,7 +24,9 @@ class SearchCommand(sublime_plugin.WindowCommand):
 
     def run(self, site=None):
         v = self.window.active_view()
+        for selection in v.sel():
+            if selection.empty():
+                text = v.word(selection)
         text = v.substr(v.sel()[0]).strip()
         self.search(text, site)
-
         return 0
